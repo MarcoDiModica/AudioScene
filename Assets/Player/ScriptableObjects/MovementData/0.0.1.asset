@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44c7b091b4cf544cbd244e58b1414d1, type: 3}
+  m_Name: 0.0.1
+  m_EditorClassIdentifier: 
+  walkSpeed: 15
+  runSpeed: 20
+  acceleration: 50
+  deceleration: 50
+  airControl: 0.1
+  jumpForce: 200
+  minJumpForce: 10
+  jumpHoldTime: 0.2
+  jumpBufferTime: 0.2
+  coyoteTime: 0.2
+  jumpCooldown: 0.2
+  maxSlopeAngle: 45
+  slopeCheckDistance: 0.5
+  uphillSpeedMultiplier: 0.75
+  downhillSpeedMultiplier: 1.4
+  gravity: -50
+  maxFallSpeed: -100
+  groundCheckRadius: 0.2
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 8
