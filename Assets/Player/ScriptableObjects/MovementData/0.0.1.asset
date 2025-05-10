@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44c7b091b4cf544cbd244e58b1414d1, type: 3}
   m_Name: 0.0.1
   m_EditorClassIdentifier: 
-  walkSpeed: 15
-  runSpeed: 20
+  walkSpeed: 4
+  runSpeed: 7
   acceleration: 50
   deceleration: 50
   airControl: 0.1
-  jumpForce: 200
+  jumpForce: 10
   minJumpForce: 10
   jumpHoldTime: 0.2
   jumpBufferTime: 0.2
@@ -27,8 +27,8 @@ MonoBehaviour:
   slopeCheckDistance: 0.5
   uphillSpeedMultiplier: 0.75
   downhillSpeedMultiplier: 1.4
-  gravity: -50
-  maxFallSpeed: -100
+  gravity: -20
+  maxFallSpeed: -20
   groundCheckRadius: 0.2
   groundLayers:
     serializedVersion: 2
