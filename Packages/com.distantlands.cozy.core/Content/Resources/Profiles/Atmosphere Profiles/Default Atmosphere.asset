@@ -2105,7 +2105,7 @@ MonoBehaviour:
   sunColor:
     overrideValue: 1
     mode: 1
-    colorVal: {r: 10.432951, g: 10.432951, b: 10.432951, a: 1}
+    colorVal: {r: 11.169328, g: 11.169328, b: 11.169328, a: 1}
     gradientVal:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3997,7 +3997,7 @@ MonoBehaviour:
       m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    floatVal: 0.597
+    floatVal: 0
     curveVal:
       serializedVersion: 2
       m_Curve:
