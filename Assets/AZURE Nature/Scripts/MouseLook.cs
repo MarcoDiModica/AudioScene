@@ -1,39 +1,50 @@
 using UnityEngine;
-
 namespace AzureNature
 {
     public class MouseLook : MonoBehaviour
     {
-
         public float mouseSensitivity;
-
         public Transform playerBody;
-
         private float xAxisClamp;
+        public AudioPauseManager audioPauseManager;
+        private bool isPaused = false;
 
         private void Awake()
         {
-            LockCursor();
             xAxisClamp = 0.0f;
-        }
-
-        private void LockCursor()
-        {
-            Cursor.lockState = CursorLockMode.Locked;
+            audioPauseManager = FindFirstObjectByType<AudioPauseManager>();
+            isPaused = audioPauseManager.isPaused;
+            UpdateCursorState();
         }
 
         private void Update()
         {
-            CameraRotation();
+            isPaused = audioPauseManager.isPaused;
+            UpdateCursorState();
+
+            if (!isPaused)
+            {
+                CameraRotation();
+            }
+        }
+
+        private void UpdateCursorState()
+        {
+            if (isPaused)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
 
         private void CameraRotation()
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
             xAxisClamp += mouseY;
-
             if (xAxisClamp > 90.0f)
             {
                 xAxisClamp = 90.0f;
@@ -46,7 +57,6 @@ namespace AzureNature
                 mouseY = 0.0f;
                 ClampXAxisRotationToValue(90.0f);
             }
-
             transform.Rotate(Vector3.left * mouseY);
             playerBody.Rotate(Vector3.up * mouseX);
         }
